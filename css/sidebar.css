@@ -1,0 +1,126 @@
+/* IMPORTANDO FONT */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+
+/* MENU FIXO NO TOPO */
+.content { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #006fff;
+    color: #fff;
+    padding: 1em;
+}
+
+.content .action-sidebar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.content .action-sidebar button span {
+    font-size: 1.3em;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    display: flex;
+}
+
+.logo h3 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: uppercase;
+}
+
+/* BUTTON SIDEBAR */
+
+.menu-open::before{
+    font-family: FontAwesome;
+    content: "\f0c9"; /* FontAwesome Unicode */
+}
+.menu-close::before {
+    font-family: FontAwesome;
+    content: "\f00d"; /* FontAwesome Unicode */
+}
+
+/* SIDEBAR */
+
+.nav-img {
+    text-align: center;
+}
+
+.nav-img img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.dash-menu p{
+    margin: 0px;
+    padding: 8px 12px 8px 8px;
+    color: #fff;
+    display: inline-flex;
+    width: 100%;
+}
+
+.dash-menu p span {
+    text-align: center;
+    margin-left: 12px;
+}
+
+.dash-menu p i {
+    font-size: 1.3em;
+    justify-content: start;
+    width: 3vh;
+}
+
+.opficio {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background: #006fff;
+    color: #fff;
+    padding-top: 20px;
+    width: 15%;
+    height: 100vh;
+    position: absolute;
+    left: -15%;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.move .sidebar {
+    left: 0;
+    transition: 500ms;
+} 
+
+/* RESPONSIVO */
+
+@media only screen and (max-width: 1300px) {
+    .sidebar {
+        width: 30%;
+        height: 100vh;
+        left: -30%;
+    }
+    .move .sidebar{
+        left: 0;
+        transition: 500ms;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 60%;
+        height: 100vh;
+        left: -60%;
+    }
+    .move .sidebar{
+        left: 0;
+        transition: 500ms;
+    }
+}
