@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+</head>
+<body>
+    <div class="content">
+        <div class="logo">
+            <div class="fa-stack" >
+                <i class="fas fa-circle fa-stack-2x text-dark"></i>
+                <i class="fas fa-umbrella fa-stack-1x text-light fa-inverse"></i>
+            </div>
+            <h3>umbrella</h3> 
+        </div>
+        <div class="action-sidebar">
+            <button onclick="sidebar()" class="btn btn-primary">
+                <span id="icon-menu" class="menu-open"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar opficio dashMenuFont">
+                <div class="nav-img">
+                    <img src="image/perfil.jpg" alt="">
+                    <p class="opficio-bold">Filipe Douglas</p>
+                    <hr>
+                </div>
+                <div class="dash-menu">
+                    <a href="index.html">
+                        <p>
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Inicio</span>
+                        </p>
+                    </a>
+                    <a href="calendario.html">
+                        <p>
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Calendário</span> 
+                        </p>
+                    </a>
+                    <a href="documentos.html">
+                        <p>
+                            <i class="fas fa-book"></i>
+                            <span>Documentos</span> 
+                        </p>
+                    </a>
+                    <a href="config.html">
+                        <p>
+                            <i class="fas fa-cogs"></i>
+                            <span>Configurações</span> 
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tela" onclick="sidebar()"></div>
+
+            <div class="conteudo">
+                <h1>Configurações</h1>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/icons.js"></script>
+    <script>
+        function sidebar(){
+            document.querySelector("#icon-menu").classList.toggle('menu-open');
+            document.querySelector("#icon-menu").classList.toggle('menu-close');
+
+            document.querySelector("body").classList.toggle('move');
+        }
+        
+    </script>
+</body>
+</html>
